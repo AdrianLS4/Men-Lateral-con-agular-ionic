@@ -1,0 +1,27 @@
+<div class="product-card" [routerLink]="['/product-detail', product.id]">
+  <div class="badge">{{ product.category }}</div>
+  
+  <div class="image-container">
+    <img [src]="product.image" [alt]="product.name" />
+  </div>
+
+  <div class="info">
+    <h3>{{ product.name }}</h3>
+    
+    <div class="rating">
+      <ion-icon name="star"></ion-icon>
+      <span>{{ product.rating }}</span>
+    </div>
+
+    <p>{{ product.description | slice:0:60 }}...</p>
+
+    <div class="footer">
+      <div class="price">
+        <span>$</span>{{ product.price }}
+      </div>
+      <ion-button (click)="onAddToCart($event)" class="add-btn">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</div>

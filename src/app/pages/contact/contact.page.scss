@@ -1,0 +1,61 @@
+.contact-header {
+  text-align: center;
+  margin: 32px 0;
+
+  h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin: 0;
+    
+    span { color: var(--ion-color-primary); }
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+.form-card {
+  margin: 0;
+  --background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+}
+
+.custom-input {
+  --background: transparent;
+  --padding-start: 0;
+  margin-bottom: 16px;
+
+  ion-label {
+    color: var(--ion-color-secondary) !important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 12px !important;
+  }
+
+  ion-input, ion-textarea {
+    --color: white;
+  }
+}
+
+.send-btn {
+  height: 56px;
+  margin-top: 32px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+
+  ion-button {
+    --padding-start: 16px;
+    --padding-end: 16px;
+    font-size: 24px;
+  }
+}

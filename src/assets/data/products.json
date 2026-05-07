@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Whey Protein Isolate",
+    "description": "Proteína de suero de máxima pureza para recuperación muscular acelerada. 25g de proteína por servicio.",
+    "price": 54.99,
+    "image": "https://i.pinimg.com/736x/28/ff/a3/28ffa31f578725a8f1e877c0a15f4469.jpg",
+    "category": "Proteínas",
+    "rating": 4.8,
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "name": "Creatina Monohidratada",
+    "description": "Aumenta tu fuerza y explosividad. Creatina micronizada de alta calidad para absorción óptima.",
+    "price": 29.99,
+    "image": "https://centroosteopaticovida.com/wp-content/uploads/2024/05/Imagen-de-WhatsApp-2024-05-07-a-las-12.11.56_13a40b37.jpg",
+    "category": "Aminoácidos",
+    "rating": 4.9,
+    "stock": 24
+  },
+  {
+    "id": 3,
+    "name": "Pre-Workout Explosion",
+    "description": "Energía extrema y enfoque mental para tus entrenamientos más intensos. Con beta-alanina y cafeína.",
+    "price": 39.99,
+    "image": "https://i.pinimg.com/1200x/8b/60/b2/8b60b241588999981750a3bfb2567d51.jpg",
+    "category": "Pre-Entreno",
+    "rating": 4.7,
+    "stock": 8
+  },
+  {
+    "id": 4,
+    "name": "BCAA 2:1:1 Recovery",
+    "description": "Aminoácidos de cadena ramificada para reducir la fatiga muscular durante el ejercicio.",
+    "price": 24.99,
+    "image": "https://i.pinimg.com/1200x/a0/24/67/a024678cef2dd685ba0388a5b3a95634.jpg",
+    "category": "Aminoácidos",
+    "rating": 4.6,
+    "stock": 12
+  }
+]

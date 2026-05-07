@@ -1,0 +1,44 @@
+:root {
+  /** Primary - Neon Lime (EL ORIGINAL) **/
+  --ion-color-primary: #ccff00;
+  --ion-color-primary-rgb: 204, 255, 0;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #b4e000;
+  --ion-color-primary-tint: #d1ff1a;
+
+  /** Secondary - Neon Pink **/
+  --ion-color-secondary: #e91e8c;
+  --ion-color-secondary-rgb: 233, 30, 140;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #cd1a7b;
+  --ion-color-secondary-tint: #eb3598;
+
+  /** Fondos y Textos (Modo Dark Real) **/
+  --ion-background-color: #0b0b0b;
+  --ion-background-color-rgb: 11, 11, 11;
+  
+  --ion-text-color: #ffffff;
+  --ion-text-color-rgb: 255, 255, 255;
+
+  /* Estilos de Componentes */
+  --soft-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+ion-toolbar {
+  --background: #0b0b0b;
+  --color: #ffffff;
+  border-bottom: 1px solid rgba(204, 255, 0, 0.3);
+}
+
+ion-title {
+  font-weight: 800;
+  color: #ccff00;
+}
+
+ion-card {
+  --background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px !important;
+}

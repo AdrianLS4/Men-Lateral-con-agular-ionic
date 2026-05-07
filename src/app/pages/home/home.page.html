@@ -1,0 +1,53 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: #000; --padding-top: 10px;">
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary"></ion-menu-button>
+    </ion-buttons>
+
+    <div class="brand-logo" style="text-align: center; width: 100%;">
+      <span style="color: white; font-weight: 300; font-size: 20px;">SUPLE</span>
+      <span style="color: #ccff00; font-weight: 900; font-size: 20px;">FORCE</span>
+    </div>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="openCart()" style="--color: white; position: relative;">
+        <ion-icon slot="icon-only" name="bag-handle-outline"></ion-icon>
+        <!-- Badge dinámico: muestra la cantidad de productos agregados -->
+        <ion-badge color="primary" *ngIf="cartCount > 0" 
+          style="position: absolute; top: -2px; right: -2px; font-size: 10px; --padding-start: 5px; --padding-end: 5px; border-radius: 50%; border: 2px solid #000; color: #000; font-weight: 900;">
+          {{ cartCount }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #000;">
+  <!-- Hero -->
+  <div class="hero" style="position: relative; height: 260px; overflow: hidden;">
+    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1000&q=80" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.5;">
+    <div style="position: absolute; top: 50px; left: 20px; z-index: 2;">
+      <h3 style="color: #ccff00; font-size: 12px; font-weight: 800; letter-spacing: 2px; margin: 0;">MAXIMIZA TU POTENCIAL</h3>
+      <h1 style="color: white; font-size: 48px; font-weight: 900; margin: 5px 0; line-height: 1;">Elite <br><span style="color: #ccff00;">Supplements</span></h1>
+      <p style="color: #ccc; font-size: 14px; max-width: 200px;">Alcanza tu mejor versión con nutrición de alto rendimiento.</p>
+    </div>
+  </div>
+
+  <div class="content-body" style="background: #0b0b0b; border-radius: 40px 40px 0 0; margin-top: -30px; position: relative; z-index: 3; padding: 30px 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <h2 style="color: white; font-weight: 800; margin: 0;">Productos <span style="color: #ccff00;">Destacados</span></h2>
+      <span style="color: #ccff00; font-size: 14px;">Ver todo</span>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" *ngFor="let product of (products$ | async)">
+          <app-product-card 
+            [product]="product"
+            (addToCart)="addToCart($event)">
+          </app-product-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

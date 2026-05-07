@@ -1,4 +1,4 @@
-# SupleForce - Tienda de Suplementos Elite
+# SupleForce - Tienda de Suplementos
 
 Esta es una aplicación móvil híbrida desarrollada con **Ionic Framework** y **Angular**, diseñada para ofrecer una experiencia de compra atractiva y rápida para el mundo del fitness.
 

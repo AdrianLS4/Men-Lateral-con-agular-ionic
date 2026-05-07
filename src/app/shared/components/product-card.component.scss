@@ -1,0 +1,93 @@
+.product-card {
+  background: #121212;
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 24px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  .badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ccff00;
+    color: black;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 800;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+
+  .image-container {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 0; // Se ve cuadrado en la foto
+    padding: 10px;
+    
+    img {
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .info {
+    h3 {
+      font-size: 20px;
+      font-weight: 800;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 15px;
+      
+      ion-icon { color: #ccff00; font-size: 14px; margin-right: 5px; }
+      span { color: white; font-size: 12px; font-weight: 700; }
+    }
+
+    p {
+      color: #888;
+      font-size: 13px;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .price {
+        font-size: 24px;
+        font-weight: 900;
+        color: white;
+        
+        span { color: #ccff00; font-size: 16px; margin-right: 2px; }
+      }
+
+      .add-btn {
+        --background: #ccff00;
+        --color: black;
+        --border-radius: 50%;
+        margin: 0;
+        height: 50px;
+        width: 50px;
+        --padding-start: 0;
+        --padding-end: 0;
+        box-shadow: 0 5px 15px rgba(204, 255, 0, 0.3);
+      }
+    }
+  }
+}

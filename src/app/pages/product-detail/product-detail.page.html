@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="color: black; font-weight: 700;">Detalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCart()" style="--color: black; position: relative;">
+        <ion-icon slot="icon-only" name="bag-handle-outline"></ion-icon>
+        <ion-badge color="dark" *ngIf="cartCount > 0" 
+          style="position: absolute; top: -2px; right: -2px; font-size: 10px; --padding-start: 5px; --padding-end: 5px; border-radius: 50%; border: 2px solid var(--ion-color-primary); color: #fff; font-weight: 900;">
+          {{ cartCount }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #000;">
+  <div *ngIf="product" class="detail-container">
+    <div class="product-image-box" style="background: white; padding: 40px; text-align: center;">
+      <img [src]="product.image" [alt]="product.name" style="max-height: 300px; width: auto;" />
+    </div>
+
+    <div class="info-sheet" style="background: #121212; border-radius: 40px 40px 0 0; padding: 32px 24px; margin-top: -30px; position: relative; z-index: 2;">
+      <div class="drag-handle" style="width: 40px; height: 4px; background: #333; margin: -10px auto 20px; border-radius: 2px;"></div>
+      
+      <div class="header-info">
+        <span style="color: #ccff00; font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">{{ product.category }}</span>
+        <h1 style="color: white; font-size: 32px; font-weight: 900; margin: 10px 0;">{{ product.name }}</h1>
+        <div class="rating" style="display: flex; align-items: center; color: white;">
+          <ion-icon name="star" style="color: #ccff00; margin-right: 5px;"></ion-icon>
+          <span style="font-weight: 700;">{{ product.rating }}</span>
+        </div>
+      </div>
+
+      <p style="color: #888; line-height: 1.6; margin: 20px 0; font-size: 15px;">{{ product.description }}</p>
+
+      <div class="stock" style="display: flex; align-items: center; color: #ccff00; font-size: 14px; margin-bottom: 30px;">
+        <ion-icon name="cube-outline" style="margin-right: 8px;"></ion-icon>
+        <span>Stock disponible: {{ product.stock }} unidades</span>
+      </div>
+
+      <div class="footer" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+        <div class="price">
+          <span style="color: #ccff00; font-weight: 700; font-size: 18px;">$</span>
+          <span style="color: white; font-size: 36px; font-weight: 900;">{{ product.price }}</span>
+        </div>
+        <ion-button expand="block" color="primary" (click)="addToCart()" style="--border-radius: 20px; height: 55px; width: 60%; color: black; font-weight: 800;">
+          <ion-icon name="cart" slot="start"></ion-icon>
+          Agregar al Carrito
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

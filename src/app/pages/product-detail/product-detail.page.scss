@@ -1,0 +1,102 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-image-box {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: radial-gradient(circle, rgba(233, 30, 140, 0.1) 0%, transparent 70%);
+
+  img {
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+  }
+}
+
+.info-sheet {
+  flex: 1;
+  background: #121212;
+  border-radius: 40px 40px 0 0;
+  padding: 32px 24px;
+  position: relative;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+
+  .drag-handle {
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    margin: -16px auto 24px;
+  }
+
+  .header-info {
+    margin-bottom: 24px;
+
+    .category {
+      color: var(--ion-color-secondary);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 8px 0;
+      font-size: 28px;
+      font-weight: 800;
+      color: white;
+    }
+
+    .rating-box {
+      display: flex;
+      align-items: center;
+      ion-icon { color: #FFD700; margin-right: 4px; }
+      span { color: white; font-weight: 600; font-size: 14px; }
+    }
+  }
+
+  .description {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .stock-info {
+    display: flex;
+    align-items: center;
+    color: var(--ion-color-secondary);
+    font-size: 14px;
+    margin-bottom: 40px;
+    
+    ion-icon { margin-right: 8px; }
+    &.low { color: #ff3b30; }
+  }
+
+  .footer-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price {
+      .symbol { color: var(--ion-color-primary); font-weight: 700; font-size: 16px; }
+      .amount { font-size: 32px; font-weight: 900; color: white; }
+    }
+
+    ion-button {
+      --background: var(--ion-color-primary);
+      --color: white;
+      --border-radius: 16px;
+      height: 56px;
+      flex: 0.8;
+      font-weight: 800;
+      --box-shadow: 0 10px 20px rgba(233, 30, 140, 0.3);
+    }
+  }
+}
